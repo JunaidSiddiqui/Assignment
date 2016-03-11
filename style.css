@@ -1,5 +1,5 @@
 /*
-Theme Name: UNDERScores
+Theme Name: underscores
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-UNDERScores is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+underscores is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -526,6 +526,11 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+.main-navigation {
+	background-color: #BABF0F;
+}
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -769,6 +774,48 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+body{
+	background-color:#F7F7F7;
+}
+
+#masthead {
+	background-color:#598590;
+	margin-bottom: 2em;	
+}
+
+.site-title {
+	margin-top: 1em;
+	text-align: center;
+}
+
+.site-title a {
+	text-decoration: none;
+	font-size: 3em;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;	
+}
+
+#page {
+	background-color: #FFFFFF;
+	font-family:'Lato', sans-serif;
+	font-weight: 400;
+	line-height:125%;
+	margin:3em auto; /* 48px 16px */
+	max-width:960px;
+	width:90%;	
+}
+
+#content {
+	float: left;
+	margin-bottom: 4em;
+	width: 65%;	
+}
+
+#secondary {
+	float: right;
+	margin-bottom: 4em;
+	width: 25%;	
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
