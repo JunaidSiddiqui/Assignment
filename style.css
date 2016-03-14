@@ -531,6 +531,16 @@ textarea {
 	background-color: #BABF0F;
 }
 
+#site-navigation {
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+
+#primary-menu li {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -779,19 +789,23 @@ body{
 }
 
 #masthead {
-	background-color:#598590;
+	background-color: #F13639;
 	margin-bottom: 2em;	
 }
 
 .site-title {
-	margin-top: 1em;
+	margin-top: 1.5em;
 	text-align: center;
 }
 
 .site-title a {
 	text-decoration: none;
-	font-size: 3em;
+	font-size: 4em;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;	
+}
+
+#sidebar h2 {
+	text-align:center;	
 }
 
 #page {
@@ -804,16 +818,83 @@ body{
 	width:90%;	
 }
 
-#content {
-	float: left;
-	margin-bottom: 4em;
-	width: 65%;	
+#main p {
+	margin-left: 20px;	
+	margin-right: 10px;
+	line-height: 30px;
 }
 
-#secondary {
+#main img {
+	margin-left: 20px;	
+}
+
+#main h4 {
+	margin-left: 20;	
+}
+
+#main h1 {
+	text-align: center;	
+}
+
+#main ul {
+	list-style-type: none;
+	line-height: 25px;	
+}
+
+#main ul li {
+	margin-left: -50px;	
+}
+
+#content {
+	margin-bottom: 4em;
+	width: 100%;	
+	background-color:#ED8F91;
+}
+
+#primary {
+	float: left;
+	width: 70%;
+}
+
+#secondary  {
 	float: right;
 	margin-bottom: 4em;
-	width: 25%;	
+	width: 30%;	
+	background-color:#EFD108;
+}
+
+#sidebar {
+	width: auto;
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-bottom: 50px;
+}
+
+#colophon {
+	clear: both;
+	width: 100%;
+	position:relative;	
+}
+
+#banner {
+	height:145px;
+	width: 100%;
+	margin: 10px auto;
+	display:block;	
+}
+
+#calendar-5 {
+	width: auto;
+	margin-left: 10px;
+	margin-right: 15px;	
+}
+
+#calendar_wrap {
+	margin-left: 15px;	
+}
+
+#pages-4 h2 {
+	margin-left: 15px;	
 }
 
 /*--------------------------------------------------------------
