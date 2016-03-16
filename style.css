@@ -790,11 +790,12 @@ body{
 
 #masthead {
 	background-color: #F13639;
-	margin-bottom: 2em;	
+	margin-bottom: 1em;	
 }
 
 .site-title {
 	margin-top: 1.5em;
+	margin-bottom: 1em;
 	text-align: center;
 }
 
@@ -825,7 +826,9 @@ body{
 }
 
 #main img {
-	margin-left: 20px;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #main h4 {
@@ -877,10 +880,14 @@ body{
 }
 
 #banner {
-	height:145px;
-	width: 100%;
-	margin: 10px auto;
+	height:auto;
+	width: auto;
 	display:block;	
+}
+
+#banner img {
+	height: 175px;	
+	width: 100%;
 }
 
 #calendar-5 {
@@ -895,6 +902,30 @@ body{
 
 #pages-4 h2 {
 	margin-left: 15px;	
+}
+
+#menucontainer {
+	width:100%;	
+}
+
+#menucontainer img {
+	margin-bottom: 20px;	
+}
+
+#menucontainer h2 {
+	text-align:center;	
+}
+
+#menucontainer .menuleft {
+	float: left;
+	margin-left: 20px;
+	width:auto;
+}
+
+#menucontainer .menuright {
+	float: right;
+	margin-right: 20px;
+	width: auto;	
 }
 
 /*--------------------------------------------------------------
