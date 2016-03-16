@@ -1,10 +1,10 @@
 <?php
 /**
- * UNDERScores functions and definitions.
+ * underscores functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package UNDERScores
+ * @package underscores
  */
 
 if ( ! function_exists( 'underscores_setup' ) ) :
@@ -19,7 +19,7 @@ function underscores_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on UNDERScores, use a find and replace
+	 * If you're building a theme based on underscores, use a find and replace
 	 * to change 'underscores' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'underscores', get_template_directory() . '/languages' );
@@ -150,3 +150,25 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+function theme_settings_page(){
+?>
+	    <div class="wrap">
+	    <h1>Theme Options</h1>
+	    <form method="post" action="options.php">
+	        <?php
+	            settings_fields("section");
+	            do_settings_sections("theme-options");      
+	            submit_button(); 
+	        ?>          
+	    </form>
+		</div>
+	<?php
+}
+
+function add_theme_menu_item() //Menu Item Created, with the title "Theme Options"
+{add_menu_page("Theme Options", "Theme Options", "manage_options", "theme-panel", "theme_settings_page", null, 99);
+} add_action("admin_menu", "add_theme_menu_item");
+
