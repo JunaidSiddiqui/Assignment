@@ -42,10 +42,14 @@
 			endif; ?>
 		</div><!-- .site-branding -->
         
-        <div id="banner">
-        	<img src="/cooking.jpg">
+        <div id="bannerslider">
+<figure>
+<img src="<?php echo bloginfo('stylesheet_directory');?>/img/23894836752_651fb52c97_b.jpg">
+<img src="<?php echo bloginfo('stylesheet_directory');?>/img/cooking.jpg">
+<img src="<?php echo bloginfo('stylesheet_directory');?>/img/chocolate-pie.jpg" alt="">
+</figure>
 		</div>
-
+	
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

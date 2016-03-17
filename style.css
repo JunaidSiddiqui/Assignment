@@ -142,6 +142,10 @@ sub {
 	bottom: -0.25em;
 }
 
+img {
+	border: 0;
+}
+
 svg:not(:root) {
 	overflow: hidden;
 }
@@ -786,13 +790,11 @@ body{
 
 #masthead {
 	background-color: #F13639;
-	margin-bottom: 1em;	
-	box-shadow: 0 8px 4px -4px #777;
+	margin-bottom: 2em;	
 }
 
 .site-title {
 	margin-top: 1.5em;
-	margin-bottom: 1em;
 	text-align: center;
 }
 
@@ -813,7 +815,7 @@ body{
 	line-height:125%;
 	margin:3em auto; /* 48px 16px */
 	max-width:960px;
-	width:100%;	
+	width:90%;	
 }
 
 #main p {
@@ -823,9 +825,7 @@ body{
 }
 
 #main img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 20px;	
 }
 
 #main h4 {
@@ -853,13 +853,13 @@ body{
 
 #primary {
 	float: left;
-	width: 75%;
+	width: 70%;
 }
 
 #secondary  {
 	float: right;
 	margin-bottom: 4em;
-	width: 25%;	
+	width: 30%;	
 	background-color:#EFD108;
 }
 
@@ -876,15 +876,11 @@ body{
 	position:relative;	
 }
 
-#banner {
-	height:auto;
-	width: auto;
+div #bannerslider {
+	width: 40%;
+	margin: auto;
 	display:block;	
-}
-
-#banner img {
-	height: 175px;	
-	width: 100%;
+	overflow: hidden;
 }
 
 #calendar-5 {
@@ -899,45 +895,6 @@ body{
 
 #pages-4 h2 {
 	margin-left: 15px;	
-}
-
-#menucontainer {
-	width:100%;	
-}
-
-#menucontainer img {
-	margin-bottom: 20px;	
-}
-
-.menuleft img {
-	box-shadow: 3px 3px 6px #888888;
-	-webkit-box-shadow: 3px 3px 6px #888888;
-}
-
-.menuright img {
-	box-shadow: 3px 3px 6px #888888;
-	-webkit-box-shadow: 3px 3px 6px #888888;
-}
-
-#menucontainer h2 {
-	text-align:center;	
-}
-
-#menucontainer .menuleft {
-	float: left;
-	margin-left: 35px;
-	width:auto;
-}
-
-#menucontainer .menuleft img {
-	-webkit-filter: drop-shadow (5px 5px 7px red);	
-	filter: drop-shadow (5px 5px 7px red);
-}
-	
-#menucontainer .menuright {
-	float: right;
-	margin-right: 35px;
-	width: auto;	
 }
 
 /*--------------------------------------------------------------
@@ -1094,4 +1051,27 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+/*Used for the banner picture transition.*/
+@keyframes fade {
+0% { left: 0%; }
+25% { left: -100%; }
+50% { left: -200%; }
+75% { left: -300%; }
+100% { left:-400%; }
+}
+
+body { margin: 0;
+}
+div#bannerslider figure img {
+width: 20%; 
+float: right; 
+}
+
+div#bannerslider figure { 
+ position: relative;
+ width: 500%;
+ margin: 0;
+ left: 0;
+ animation: 15s fade infinite; 
 }
