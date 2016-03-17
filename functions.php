@@ -126,6 +126,22 @@ function underscores_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
 
+/* Adding a dashboard menu option */
+
+
+function my_dashboard_menu(){
+	add_dashboard_page('My Dashboard Option', 'Theme Options', 'read', 'my-dashboard-option', 'my_menu_dash');
+
+}
+
+function my_menu_dash(){
+	$mytext='<h1>Welcome to my Theme Options</h1>';
+	$mytext='<input type-"text">';
+	echo $mytext;
+}
+
+add_action('admin_menu', 'my_dashboard_menu');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -150,25 +166,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-
-
-function theme_settings_page(){
 ?>
-	    <div class="wrap">
-	    <h1>Theme Options</h1>
-	    <form method="post" action="options.php">
-	        <?php
-	            settings_fields("section");
-	            do_settings_sections("theme-options");      
-	            submit_button(); 
-	        ?>          
-	    </form>
-		</div>
-	<?php
-}
 
-function add_theme_menu_item() //Menu Item Created, with the title "Theme Options"
-{add_menu_page("Theme Options", "Theme Options", "manage_options", "theme-panel", "theme_settings_page", null, 99);
-} add_action("admin_menu", "add_theme_menu_item");
 
