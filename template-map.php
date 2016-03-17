@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * Template Name: Hajujo's Site Map Page
+ * Template Name: Hajujo's - Home Page
  *
- * @package underscores
+ * @package hajujo
  */
 
 get_header(); ?>
@@ -13,11 +13,15 @@ get_header(); ?>
         
 						<h1>Welcome to Hajujo's!</h1>
 						
-                        <img src="img/cooking.jpg" alt="Cooking Picture" />
+                        <img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/cooking.jpg" width= "300" height= "200"/>
+                        
 						
                         <p>HAJUJO is a family owned Mediterranean restaurant located in the heart of Mississauga that offers a fine dining cuisine offering authentic flavors and recipes reigning from the Middle East. Our extensive menu allows guests to enjoy an array of meal choices ranging anywhere from traditional chicken shawarmas to deep fried calamari with a side of baba ganoush!</p>
-						<p><strong><i>Authentic Mediterranean Fine Dining Experience in Mississauga</i></strong></p>
+                        
+                        <br>
+						<p><strong><center><i>Authentic Mediterranean Fine Dining Experience in Mississauga</i></center></strong></p>
 						
+                        <br>
 						<h4>Hours of Operation</h4>
 						<ul>
 							<li><strong>Monday:</strong> 11:00am - 11:00pm</li>
