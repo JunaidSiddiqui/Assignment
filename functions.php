@@ -126,22 +126,6 @@ function underscores_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
 
-/* Adding a dashboard menu option */
-
-
-function my_dashboard_menu(){
-	add_dashboard_page('My Dashboard Option', 'Theme Options', 'read', 'my-dashboard-option', 'my_menu_dash');
-
-}
-
-function my_menu_dash(){
-	$mytext='<h1>Welcome to my Theme Options</h1>';
-	$mytext='<input type-"text">';
-	echo $mytext;
-}
-
-add_action('admin_menu', 'my_dashboard_menu');
-
 /**
  * Implement the Custom Header feature.
  */
@@ -166,6 +150,22 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-?>
 
+/**
+ * Function for Custom Post Type - Hajujo's Food Reviews .
+ */
+function food_reviews_custompost() {
+	$args = array(
+		'label' => 'Food Reviews',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'rewrite' => array('slug' => 'food_reviews'),
+		'query_var' => true,
+		'supports' => array(
+			'title', 'excerpt', 'comments', 'thumbnail', 'author',)
+		);
+	register_post_type('food_reviews', $args);
+}
 
+add_action('init', 'food_reviews_custompost');
