@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package underscores
+ * @package hajujo
  */
 
 ?><!DOCTYPE html>
@@ -26,7 +26,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-		
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -42,14 +41,10 @@
 			endif; ?>
 		</div><!-- .site-branding -->
         
-        <div id="bannerslider">
-<figure>
-<img src="<?php echo bloginfo('stylesheet_directory');?>/img/23894836752_651fb52c97_b.jpg">
-<img src="<?php echo bloginfo('stylesheet_directory');?>/img/cooking.jpg">
-<img src="<?php echo bloginfo('stylesheet_directory');?>/img/chocolate-pie.jpg" alt="">
-</figure>
+        <div id="banner">
+        	<img src="<?php echo bloginfo('stylesheet_directory'); ?>/img/cooking.jpg"/>
 		</div>
-	
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

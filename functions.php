@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package underscores
+ * @package hajujo
  */
 
 if ( ! function_exists( 'underscores_setup' ) ) :
@@ -151,13 +151,34 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Function for Custom Post Type - Hajujo's Food Reviews .
+ */
+function food_reviews_custompost() {
+	$args = array(
+		'label' => 'Food Reviews',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'rewrite' => array('slug' => 'food_reviews'),
+		'query_var' => true,
+		'supports' => array(
+			'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author',)
+		);
+	register_post_type('food_reviews', $args);
+}
+
+add_action('init', 'food_reviews_custompost');
 
 
+/**
+ * Dashboard Menu Settings Item Created, with the title "Theme Options"
+  */
 function theme_settings_page(){
 ?>
 	    <div class="wrap">
 	    <h1>Theme Options</h1>
-	    <form method="post" action="options.php">
+	    <form method="post">
 	        <?php
 	            settings_fields("section");
 	            do_settings_sections("theme-options");      
@@ -165,11 +186,11 @@ function theme_settings_page(){
 	        ?>          
 	    </form>
 		</div>
-	<?php
+<?php
 }
 
+function add_theme_menu_item(){ 
+add_menu_page("Theme Options", "Theme Options", "manage_options", "theme-panel", "theme_settings_page");
+} 
 
-function add_theme_menu_item() //Menu Item Created, with the title "Theme Options"
-{add_menu_page("Theme Options", "Theme Options", "manage_options", "theme-panel", "theme_settings_page", null, 99);
-} add_action("admin_menu", "add_theme_menu_item");
-
+add_action("admin_menu", "add_theme_menu_item");

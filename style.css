@@ -90,7 +90,6 @@ template {
 	display: none;
 }
 
-
 a {
 	background-color: transparent;
 }
@@ -521,7 +520,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Navigation - changed background color, additional padding to site head - and padding to prime menu 
+# Navigation
 --------------------------------------------------------------*/
 
 .main-navigation {
@@ -541,8 +540,6 @@ textarea {
 #primary-menu li a{
 	color:#000000;	
 }
-
-/* allows for color change on prime menu when hovered over */
 
 #primary-menu li a:hover {
 	background-color:#FCEBB6;
@@ -792,7 +789,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Content - changed background color, changed header background color while adding a margin to the bottom and improving detail through adding shadow 
+# Content
 --------------------------------------------------------------*/
 body{
 	background-color:#F4F0F0;
@@ -804,7 +801,6 @@ body{
 	box-shadow: 0 8px 4px -4px #777;
 }
 
-/* added margin to "HAJUJO" brand name and it put text in the middle of the div */
 .site-title {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
@@ -818,8 +814,6 @@ body{
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;	
 }
 
-/* aligned the title of the SIDEBAR to the middle of the content area */
-
 #sidebar h2 {
 	text-align:center;	
 }
@@ -829,7 +823,7 @@ body{
 	font-family:'Lato', sans-serif;
 	font-weight: 400;
 	line-height:125%;
-	margin:3em auto; /* 48px 16px */
+	margin:0.5em auto; 
 	max-width:960px;
 	width:100%;	
 }
@@ -839,8 +833,6 @@ body{
 	margin-right: 10px;
 	line-height: 30px;
 }
-
-/* added shadows, margins for image used */
 
 #main img {
 	display: block;
@@ -869,7 +861,6 @@ body{
 	margin-left: -68px;	
 }
 
-/* changed background color to a lighter tone that better suits the eye, kept width steady at 100% regardless of how page is moved */
 #content {
 	margin-bottom: 4em;
 	width: 100%;	
@@ -880,8 +871,6 @@ body{
 	float: left;
 	width: 75%;	
 }
-
-/* the right side DIV of the page including containing widgets */
 
 #secondary  {
 	float: right;
@@ -899,7 +888,6 @@ body{
 	margin-left: 15px;
 	margin-right: 10px;
 	margin-bottom: 50px;
-	padding: ;
 }
 
 #colophon {
@@ -969,7 +957,10 @@ body{
 	width: auto;	
 }
 
-/* Responsive output when screen is at a MAX-WIDTH of 750px to allow all text, widgets, footer and header to fit */
+/*--------------------------------------------------------------
+## Code to make the website responsive
+--------------------------------------------------------------*/
+
 @media only screen and (max-width: 750px) {
 
 #primary ,
@@ -1021,8 +1012,6 @@ body{
 .group-blog .byline {
 	display: inline;
 }
-
-/* provides a margin on top portion of pages */
 
 .page-content,
 .entry-content,

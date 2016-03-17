@@ -3,7 +3,7 @@
  *
  * Template Name: Hajujo's - Menu Page
  *
- * @package underscores
+ * @package hajujo
  */
 
 get_header(); ?>

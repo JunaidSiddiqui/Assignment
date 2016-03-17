@@ -30,7 +30,7 @@ get_header(); ?>
 							<li><strong>Thursday:</strong>11:00am - 11:00pm</li>
 							<li><strong>Friday:</strong>11:00am - 1:00am</li>
 							<li><strong>Saturday:</strong>11:00am - 1:00am</li>
-                            <li><strong>Sunday:</strong>11:00am - 8:00pm></li>
+                            <li><strong>Sunday:</strong>11:00am - 8:00pm</li>
 						</ul>
 			
 		</main><!-- #main -->

@@ -2,6 +2,8 @@
 
 /**
  * Template Name: Hajujo's - Food Reviews
+ *
+ * @package hajujo
  **/
  
  get_header(); ?>
